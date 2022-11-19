@@ -2,7 +2,6 @@ import { Router } from "express";
 import { validateFields } from "../middlewares/validateFields";
 import { methods as authController } from "./../controllers/auth.controller";
 const {check}=require('express-validator');
-const {validateFields} = require('../middlewares/validateFields');
 
 const router = Router();
 
