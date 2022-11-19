@@ -1,0 +1,5 @@
+correr:
+npm run dev
+
+Instalar dependencias 
+npm i
