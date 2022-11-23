@@ -8,13 +8,17 @@ import languageRoutes from "./routes/language.routes";
 import authRoutes from "./routes/auth.routes";
 
 const app = express();
+const whitelist=['http://localhost:4200'];
+
 
 // Settings
 app.set("port", 4000);
 app.set("pkg",pkg);
 
 // Middlewares
-app.use(cors());
+app.use(cors({
+    origin: whitelist
+}));
 app.use(morgan("dev"));
 app.use(express.json());//para entender entradas json
 
