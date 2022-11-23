@@ -1,5 +1,6 @@
 //app.js para configurar la plicacion de express
 import express from "express";
+import cors from "cors";
 import morgan from "morgan";
 import pkg from '../package.json';
 // Routes
@@ -13,6 +14,7 @@ app.set("port", 4000);
 app.set("pkg",pkg);
 
 // Middlewares
+app.use(cors());
 app.use(morgan("dev"));
 app.use(express.json());//para entender entradas json
 
